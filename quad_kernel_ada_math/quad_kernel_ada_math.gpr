@@ -1,0 +1,30 @@
+project Quad_Kernel_Ada_Math is
+   for Source_Dirs use (".");
+   for Object_Dir use "obj";
+   for Library_Dir use "lib";
+   for Library_Name use "quad_math";
+   for Library_Kind use "static"; -- Changed to static for easier local testing
+
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat2022", "-O3", "-gnatwa");
+   end Compiler;
+
+   package Builder is
+      for Executable ("test_fft.adb") use "test_fft";
+      for Executable ("test_matrix_ops.adb") use "test_matrix_ops";
+      for Executable ("test_interpolation.adb") use "test_interpolation";
+      for Executable ("test_optical_flow.adb") use "test_optical_flow";
+      for Executable ("test_geometric_primitives.adb") use "test_geometric_primitives";
+      for Executable ("test_statistics.adb") use "test_statistics";
+      for Executable ("test_convolution.adb") use "test_convolution";
+      for Executable ("test_edge_detection.adb") use "test_edge_detection";
+      for Executable ("test_histogram.adb") use "test_histogram";
+      for Executable ("test_morphology.adb") use "test_morphology";
+      for Executable ("test_perspective.adb") use "test_perspective";
+      for Executable ("test_polynomial_fitting.adb") use "test_polynomial_fitting";
+      for Executable ("test_quaternions.adb") use "test_quaternions";
+      for Executable ("test_bezier.adb") use "test_bezier";
+      for Executable ("test_color_space.adb") use "test_color_space";
+      for Executable ("test_precision.adb") use "test_precision";
+   end Builder;
+end Quad_Kernel_Ada_Math;

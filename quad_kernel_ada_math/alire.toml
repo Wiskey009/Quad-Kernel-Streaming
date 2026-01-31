@@ -1,0 +1,11 @@
+name = "quad_math"
+description = "Stream validation"
+version = "0.1.0-dev"
+
+authors = ["Antigravity"]
+maintainers = ["Antigravity <antigravity@example.com>"]
+licenses = "MIT"
+website = ""
+tags = ["kernel"]
+
+project-files = ["quad_kernel_ada_math.gpr"]

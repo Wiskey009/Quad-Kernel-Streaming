@@ -1,0 +1,63 @@
+# ========================================
+# QUAD KERNEL STREAMING PIPELINE
+# .gitignore
+# ========================================
+
+# === Build Directories ===
+build/
+build_*/
+cmake-build-*/
+out/
+
+# === CMake ===
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# === C/C++ Compiled ===
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# === Ada/GNAT ===
+*.ali
+*.bexch
+lib/*.a
+obj/
+alire/
+config/
+
+# === Rust ===
+quad_kernel_rust_wasm/target/
+Cargo.lock
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vs/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logs ===
+*.log
+build_error.log
+
+# === Temporary ===
+*.tmp
+*.temp
+*.bak

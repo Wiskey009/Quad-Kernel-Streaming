@@ -1,0 +1,66 @@
+[package]
+name = "quad_kernel_rust_wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib", "staticlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.92"
+wasm-bindgen-futures = "0.4.42"
+js-sys = "0.3.69"
+web-sys = { version = "0.3.69", features = [
+    "console",
+    "Worker",
+    "MessagePort",
+    "MessageChannel",
+    "MessageEvent",
+    "Performance",
+    "WebSocket",
+    "BinaryType",
+    "ErrorEvent",
+    "Window",
+    "Headers",
+    "RtcDataChannel",
+    "RtcPeerConnection",
+    "Document",
+    "Location",
+    "Request",
+    "RequestInit",
+    "Response",
+    "MediaSource",
+] }
+serde = { version = "1.0", features = ["derive"] }
+serde-wasm-bindgen = "0.6"
+serde_json = "1.0"
+serde_bytes = "0.11"
+thiserror = "1.0"
+futures = "0.3"
+approx = "0.5"
+tokio = { version = "1.0", features = ["sync", "time", "macros"] }
+bytes = { version = "1.0", features = ["serde"] }
+async-trait = "0.1"
+bincode = "1.3"
+quick-xml = { version = "0.31", features = ["serialize"] }
+url = "2.0"
+ring = "0.17"
+getrandom = { version = "0.2", features = ["js"] }
+console_error_panic_hook = { version = "0.1", optional = true }
+
+[features]
+default = ["console_error_panic_hook"]
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+tokio = { version = "1.0", features = ["full"] }
+tokio-tungstenite = { version = "0.20", features = ["rustls-tls-native-roots"] }
+tungstenite = "0.20"
+reqwest = { version = "0.11", features = ["json"] }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[profile.release]
+lto = true
+opt-level = 's'
+panic = 'abort'
