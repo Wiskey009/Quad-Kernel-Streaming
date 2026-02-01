@@ -14,7 +14,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" alt="Version"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"/>
+  <img src="https://img.shields.io/badge/License-LGPLv3-blue?style=flat-square" alt="License"/>
   <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Platform"/>
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square" alt="Build"/>
   <img src="https://img.shields.io/badge/Languages-4-orange?style=flat-square" alt="Languages"/>
@@ -443,7 +443,9 @@ This project demonstrates that polyglot systems are not only possible but can be
 
 ## 📜 License
 
-MIT License - See [LICENSE](LICENSE) for details.
+This project is licensed under the **GNU Lesser General Public License v3.0 (LGPLv3)** - See [LICENSE](LICENSE) for details.
+
+This allows you to link this library into your own applications (proprietary or open source) dynamically, but any modifications to the core kernel itself must be open-sourced.
 
 ---
 
