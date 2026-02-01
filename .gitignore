@@ -61,3 +61,11 @@ build_error.log
 *.tmp
 *.temp
 *.bak
+
+# === Web Interface ===
+node_modules/
+dist/
+npm-debug.log
+.env
+quad_kernel_web_interface/docs/
+quad_kernel_web_interface/gen_quad_kernel_web_interface.py

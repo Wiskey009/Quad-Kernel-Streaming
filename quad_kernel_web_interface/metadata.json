@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-02-01T11:23:23",
+  "total_modules": 1,
+  "successful": 1,
+  "total_tokens": 4635,
+  "results": [
+    {
+      "modulo": "Performance Dashboard",
+      "tokens": 4635,
+      "status": "\u2705"
+    }
+  ]
+}
