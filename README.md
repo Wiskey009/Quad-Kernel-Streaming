@@ -15,7 +15,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" alt="Version"/>
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"/>
-  <img src="https://img.shields.io/badge/Platform-Windows%20|%20Linux-lightgrey?style=flat-square" alt="Platform"/>
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Platform"/>
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square" alt="Build"/>
   <img src="https://img.shields.io/badge/Languages-4-orange?style=flat-square" alt="Languages"/>
 </p>
