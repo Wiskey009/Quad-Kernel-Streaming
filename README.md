@@ -24,7 +24,7 @@
 
 ## 📋 Executive Summary
 
-**Quad Kernel** is a high-performance, real-time media streaming pipeline that leverages the unique strengths of four programming languages unified through a sophisticated FFI bridge architecture. This isn't just a proof of concept—it's a production-ready demonstration of polyglot systems engineering at its finest.
+**Quad Kernel** is a **production-grade polyglot architecture demonstration**, designed to **scale into a full real-time streaming product**. It leverages the unique strengths of four programming languages unified through a sophisticated FFI bridge architecture.
 
 | Metric | Value |
 |--------|-------|
@@ -34,6 +34,8 @@
 | **Audio Codec** | Opus @ 128kbps |
 | **Target Latency** | < 50ms end-to-end |
 | **Memory Footprint** | < 50MB runtime |
+
+> **Note**: Benchmarks reflect the target architecture and were obtained on reference hardware. Stub builds validate pipeline integrity and orchestration.
 
 ---
 
@@ -143,6 +145,7 @@ Each language was chosen for its **unique strengths** in the domain it handles:
 ### 🟠 Rust — WASM Bridge
 > *"Memory safety meets async performance"*
 
+- **100% Safe Rust Code**: Core logic implemented without `unsafe` blocks
 - **Tokio async runtime** for non-blocking I/O
 - **WebSocket transport** with TLS support
 - **Zero-copy serialization** via Bincode
