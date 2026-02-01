@@ -112,6 +112,16 @@ $ ./quad_kernel_system.exe
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
+## 🌐 Web Dashboard (Frontend)
+
+The **Quad Kernel Web Interface** is a high-performance React application that runs the kernel directly in the browser via WebAssembly.
+
+- **Direct Memory Access**: WASM shares memory with the browser's WebGL context for zero-copy rendering.
+- **Multithreaded**: Powered by Rust `wasm-bindgen` and web workers.
+- **Latency-Free**: No REST API overhead; direct kernel calls from JavaScript.
+
+See the [Web Interface Documentation](./quad_kernel_web_interface/README.md) for full architecture specs.
+
 ---
 
 ## 🎯 Why Four Languages?
@@ -324,6 +334,12 @@ quad_kernel/
 │   │   └── thread_pool_wasm.rs         # Async Executor for WASM
 │   └── Cargo.toml
 │
+├── 📂 quad_kernel_web_interface/       # Web Dashboard (React + WASM)
+│   ├── src/                            # TypeScript Source
+│   ├── src/wasm/pkg/                   # Compiled WASM Bindings
+│   ├── docs/                           # Tech Architecture Specs
+│   └── vite.config.ts                  # Build Config
+│
 ├── 📂 src/
 │   └── main_system.c                   # Main Entry Point & Loop
 │
@@ -409,7 +425,8 @@ cargo test
 - [x] **Phase 3**: Audio kernel (Opus/DSP)
 - [x] **Phase 4**: Math kernel (Ada/SPARK)
 - [x] **Phase 5**: WASM bridge (Rust/Tokio)
-- [ ] **Phase 6**: Browser WASM deployment
+- [x] **Phase 6**: Browser WASM deployment (React + WebGL)
+
 - [ ] **Phase 7**: 🔴 **AMD GPU Support** (AMF - Advanced Media Framework)
 - [ ] **Phase 8**: 🔵 **Intel GPU Support** (QuickSync / OneVPL for modern iGPUs)
 - [ ] **Phase 9**: GPU compute shaders (Vulkan/OpenCL)
